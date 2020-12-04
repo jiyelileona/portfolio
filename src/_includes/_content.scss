@@ -102,3 +102,9 @@ article {
     border-radius: 16px;
   }
 }
+
+a {
+  &:link, &:active {
+    color: $text-color;
+  }
+}

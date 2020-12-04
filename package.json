@@ -6,15 +6,21 @@
   "scripts": {
     "clean": "rimraf dist",
     "assets": "parcel watch src/main.js src/style.scss -d dist",
+    "build:assets": "parcel build src/main.js src/style.scss -d dist",
     "eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "publish": "surge -d https://leona.surge.sh dist",
     "watch": "run-p eleventy assets",
-    "start": "run-s clean watch"
+    "start": "run-s clean watch",
+    "build": "run-s clean build:assets build:eleventy",
+    "deploy": "run-s build publish"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
+    "cssnano": "^4.1.10",
     "eleventy-plugin-blog-tools": "^0.3.1",
     "eleventy-plugin-youtube-embed": "^1.4.8",
     "moment": "^2.29.1",

@@ -5,5 +5,9 @@ title: cook
 {% include  'navbar.njk' %}
 
 <div class="container cook">
-  {# {% recipe 'This is my favourate burger recipe!', 'https://www.xiachufang.com/recipe/105950380/', 'https://i2.chuimg.com/2b4a8ea92f10484d8f68b51c03b860b9_1920w_1080h.jpg?imageView2/2/w/300/interlace/1/q/90'%} #}
+<ul>
+  {% recipe 'This is my favourate burger recipe!', '', 'https://i2.chuimg.com/2b4a8ea92f10484d8f68b51c03b860b9_1920w_1080h.jpg?imageView2/2/w/300/interlace/1/q/90' %}
+    Feel free to add anything you like.
+  {% endrecipe%}
+  </ul>
 </div>
