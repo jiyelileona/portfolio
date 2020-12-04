@@ -1,7 +1,7 @@
 ---
 title: Make In&Out burger at home
 date: 2020-12-02
-tags: recipe
+tags: ['post', 'recipe']
 ---
 
 Life is not just about codding, let's enjoy this burger!
