@@ -1,0 +1,21 @@
+---
+title: blogs
+---
+{% include  'navbar.njk' %}
+<div>
+  <h1 class="page-title">My Blogs</h1>
+  <div class="container">
+    <ol class="blogs" reversed>
+      {%- for post in collections.post | reverse-%}
+      <li>
+        <div class="post">
+          <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+          <div class="info">
+            {{ post.date | getDate }}
+          </div>
+        </div>
+      </li>
+      {%- endfor -%}
+    </ol>
+  </div>
+</div>

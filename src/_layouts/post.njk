@@ -1,0 +1,11 @@
+---
+layout: main.njk
+---
+
+{% include  'navbar.njk' %}
+
+<article>
+  <h1 class="page-title">{{ title }}</h1>
+  <p>Posted {{ page.date | fromNow }}</p>
+  {{ content | safe }}
+</article>

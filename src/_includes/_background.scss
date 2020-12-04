@@ -1,0 +1,234 @@
+.animation {
+  z-index: -1;
+
+  .moon {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: moon 15s infinite;
+    box-shadow: 0px 0px 1px 0px #508fb9;
+  }
+
+  .small {
+    width: 3.125rem;
+    height: 3.125rem;
+    left: 6.25rem;
+    top: 3.125rem;
+    opacity: 0.6;
+  }
+
+  .medium {
+    width: 5rem;
+    height: 5rem;
+    left: 5.3125rem;
+    top: 2.1875rem;
+    opacity: 0.5;
+  }
+
+  .large {
+    width: 7.5rem;
+    height: 7.5rem;
+    left: 4.0625rem;
+    top: 0.9375rem;
+    opacity: 0.4;
+  }
+
+  .xlarge {
+    width: 10rem;
+    height: 10rem;
+    left: 2.8125rem;
+    top: 0rem;
+    opacity: 0.3;
+  }
+
+  @keyframes moon {
+    0% {
+      transform: scale(0.8);
+    }
+
+    50% {
+      transform: scale(1.2);
+    }
+
+    100% {
+      transform: scale(0.8);
+    }
+  }
+
+  .cloud-background {
+    bottom: 0;
+    right: 0;
+    position: fixed;
+
+    .shade5 {
+      position: absolute;
+      border-radius: 50%;
+      animation: cloudShade 11s infinite;
+      background: #f29ca5;
+      width: 25rem;
+      height: 20rem;
+      right: 4.0625rem;
+      bottom: -6.875rem;
+    }
+
+    .shade6 {
+      position: absolute;
+      border-radius: 50%;
+      animation: cloudShade 8s infinite;
+      background: #efaaae;
+      width: 13.125rem;
+      height: 11.875rem;
+      right: 9.375rem;
+      bottom: 6.5625rem;
+    }
+
+    .shade7 {
+      position: absolute;
+      border-radius: 50%;
+      animation: cloudShade 10s infinite;
+      background: #f29ca5;
+      width: 17.5rem;
+      height: 21.875rem;
+      right: -3.75rem;
+      bottom: -0.9375rem;
+    }
+
+    .shade8 {
+      position: absolute;
+      border-radius: 50%;
+      animation: cloudShade 9s infinite;
+      background: #f29ca5;
+      width: 18.75rem;
+      height: 18.75rem;
+      right: 20.3125rem;
+      bottom: -12.5rem;
+    }
+
+    .cloud1 {
+      position: absolute;
+      border-radius: 50%;
+      animation: cloudShade 11s infinite;
+      background: #f3899d;
+      width: 21.875rem;
+      height: 15.625rem;
+      right: 5.625rem;
+      bottom: -4.6875rem;
+    }
+
+    .cloud2 {
+      position: absolute;
+      border-radius: 50%;
+      animation: cloudShade 10s infinite;
+      background: #f3899d;
+      width: 18.75rem;
+      height: 25rem;
+      right: -3.75rem;
+      bottom: -5.625rem;
+    }
+
+    .cloud3 {
+      position: absolute;
+      border-radius: 50%;
+      animation: cloudShade 8s infinite;
+      background: #f3899d;
+      width: 13.75rem;
+      height: 11.875rem;
+      right: 7.8125rem;
+      bottom: 5.3125rem;
+    }
+
+    .cloud4 {
+      position: absolute;
+      border-radius: 50%;
+      animation: cloudShade 9s infinite;
+      background: #f3899d;
+      width: 20.3125rem;
+      height: 28.125rem;
+      right: 17.8125rem;
+      bottom: -23.125rem;
+    }
+
+    @keyframes cloudShade {
+      0% {
+        transform: scale(0.9);
+      }
+
+      50% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(0.9);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .cloud-background {
+        transform: scale(0.7);
+      }
+    }
+  }
+
+  .star-background {
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      animation: blinkstar 2000ms infinite;
+    }
+
+    .star11 {
+      width: 16px;
+      height: 5px;
+      left: 150px;
+      top: 250px;
+    }
+
+    .star12 {
+      width: 5px;
+      height: 16px;
+      left: 156px;
+      top: 245px;
+    }
+
+    .star21 {
+      width: 12px;
+      height: 3px;
+      left: 550px;
+      top: 100px;
+    }
+
+    .star22 {
+      width: 3px;
+      height: 12px;
+      left: 555px;
+      top: 96px;
+    }
+
+    .star31 {
+      width: 12px;
+      height: 3px;
+      bottom: 180px;
+      left: 400px;
+    }
+
+    .star32 {
+      width: 3px;
+      height: 12px;
+      bottom: 175px;
+      left: 405px;
+    }
+
+    @keyframes blinkstar {
+      from {
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 0.4;
+      }
+      to {
+        opacity: 0.8;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+---
+title: Home
+permalink: /
+eleventyExcludeFromCollections: true
+---
+
+<h1 class="homepage-title">{{ settings.author }}'s Playground</h1>
+
+<ul>
+{% for page in collections.pagesWithIcons %}
+  <li><a class="btn" href="{{page.url}}">{{page.data.title | slug | icon | safe}} {{page.data.title}}</a></li>
+{% endfor %}
+</ul>
